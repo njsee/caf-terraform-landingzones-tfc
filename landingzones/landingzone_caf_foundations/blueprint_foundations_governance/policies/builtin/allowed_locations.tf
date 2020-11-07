@@ -2,7 +2,7 @@
 #Name: Allowed locations
 
 locals {
-  loclist = "${jsonencode(var.policies_matrix.list_of_allowed_locs)}"
+  loclist = "jsonencode(var.policies_matrix.list_of_allowed_locs)"
 }
 
 resource "azurerm_policy_assignment" "res_location" {
