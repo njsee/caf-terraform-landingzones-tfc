@@ -142,7 +142,7 @@ module "bastion" {
   # source  = "aztfmod/caf-azure-bastion/azurerm"
   # version = "0.1.0"
 
-  enable_bastion                   = var.core_networking.enable_bastion
+  #enable_bastion                   = var.core_networking.enable_bastion
   bastion_config                   = var.core_networking.bastion_config
   
   name                             = var.core_networking.bastion_config.name
