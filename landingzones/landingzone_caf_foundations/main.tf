@@ -1,14 +1,15 @@
 provider "azurerm" {
+  version             = "~> 2.15"
   features {}
 }
 
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "aztfmod"
+    organization = "contosome"
 
     workspaces {
-      name = "test-landingzone-caf-foundations"
+      name = "caf-terraform-landingzones-tfc"
     }
   }
 }
