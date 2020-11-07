@@ -1,7 +1,12 @@
 terraform {
-    required_version = ">= 0.12.6"
-    backend "azurerm" {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "contosome"
+
+    workspaces {
+      name = "caf-terraform-landingzones-tfc"
     }
+  }
 }
 
 data "azurerm_subscription" "current" {
