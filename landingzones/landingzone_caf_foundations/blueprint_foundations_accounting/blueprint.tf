@@ -47,7 +47,7 @@ module "activity_logs" {
 
 #Specify the operations diagnostic logging repositories 
 module "diagnostics_logging" {
-  source = "github.com/aztfmod/terraform-azurerm-caf-diagnostics-logging?ref=vnext"
+  source = "github.com/njsee/terraform-azurerm-caf-diagnostics-logging"
   # source  = "aztfmod/caf-diagnostics-logging/azurerm"
   # version = "2.0.1"
 
