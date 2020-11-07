@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "rg_operations" {
 
 #Specify the subscription logging repositories 
 module "activity_logs" {
-  source = "github.com/aztfmod/terraform-azurerm-caf-activity-logs?ref=vnext"
+  source = "github.com/njsee/terraform-azurerm-caf-activity-logs"
   # source  = "aztfmod/caf-activity-logs/azurerm"
   # version = "2.0.0"
   
