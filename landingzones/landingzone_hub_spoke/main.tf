@@ -25,7 +25,7 @@ data "terraform_remote_state" "landingzone_caf_foundations" {
   config = {
     organization = "contosome"
     workspaces = {
-      name = "test-landingzone-caf-foundations"
+      name = "caf-terraform-landingzones-tfc-foundations"
     }
   }
 }
