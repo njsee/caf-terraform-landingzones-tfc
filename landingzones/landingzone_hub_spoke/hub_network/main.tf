@@ -4,7 +4,7 @@ terraform {
     organization = "contosome"
 
     workspaces {
-      name = "caf-terraform-landingzones-tfc"
+      name = "caf-terraform-landingzones-tfc-hub_spoke"
     }
   }
 }

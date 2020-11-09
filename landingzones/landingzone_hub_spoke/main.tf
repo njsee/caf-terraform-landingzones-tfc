@@ -5,10 +5,10 @@ provider "azurerm" {
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "aztfmod"
+    organization = "contosome"
 
     workspaces {
-      name = "test-landingzone-hub-spoke"
+      name = "caf-terraform-landingzones-tfc-hub_spoke"
     }
   }
 }
@@ -23,7 +23,7 @@ locals {
 data "terraform_remote_state" "landingzone_caf_foundations" {
   backend = "remote"
   config = {
-    organization = "aztfmod"
+    organization = "contosome"
     workspaces = {
       name = "test-landingzone-caf-foundations"
     }
