@@ -4,8 +4,8 @@
 global_settings = {
   #specifies the set of locations you are going to use in this landing zone
   location_map = {
-    region1 = "southeastasia"
-    region2 = "eastasia"
+    region1 = "var.region1"
+    region2 = "var.region2"
   }
 
   #naming convention to be used as defined in naming convention module, accepted values are cafclassic, cafrandom, random, passthrough
@@ -13,10 +13,10 @@ global_settings = {
 
   #Set of tags for core operations
   tags_hub = {
-    environment    = "DEV"
-    owner          = "CAF"
+    environment    = "var.env"
+    owner          = "var.owner"
     deploymentType = "Terraform-TFC"
-    costCenter     = "1664"
+    costCenter     = "2020"
     BusinessUnit   = "SHARED"
     DR             = "NON-DR-ENABLED"
   }
@@ -25,11 +25,11 @@ global_settings = {
   resource_groups_hub = {
     HUB-CORE-SEC = {
       name     = "hub-core-sec"
-      location = "southeastasia"
+      location = "var.region1"
     }
     HUB-OPERATIONS = {
       name     = "hub-operations"
-      location = "southeastasia"
+      location = "region1"
     }
   }
 }
@@ -59,7 +59,7 @@ accounting_settings = {
   azure_diagnostics_logs_event_hub = false
 
   #Logging and monitoring 
-  analytics_workspace_name = "caflalogs"
+  analytics_workspace_name = "ES-aLa"
 
   ##Log analytics solutions to be deployed 
   solution_plan_map = {
@@ -139,11 +139,11 @@ governance_settings = {
 ## security 
 security_settings = {
   #Azure Security Center Configuration 
-  enable_security_center = false
+  enable_security_center = true
   security_center = {
     contact_email = "email@email.com"
     contact_phone = "9293829328"
   }
   #Enables Azure Sentinel on the Log Analaytics repo
-  enable_sentinel = true
+  enable_sentinel = false
 }
