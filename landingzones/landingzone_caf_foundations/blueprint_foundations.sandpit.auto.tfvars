@@ -4,8 +4,8 @@
 global_settings = {
   #specifies the set of locations you are going to use in this landing zone
   location_map = {
-    region1 = var.region1
-    region2 = var.region2
+    region1 = "america"
+    region2 = "canada"
   }
 
   #naming convention to be used as defined in naming convention module, accepted values are cafclassic, cafrandom, random, passthrough
@@ -13,10 +13,10 @@ global_settings = {
 
   #Set of tags for core operations
   tags_hub = {
-    environment    = var.env
-    owner          = var.owner
+    environment    = "DEV"
+    owner          = "CAF"
     deploymentType = "Terraform-TFC"
-    costCenter     = "2020"
+    costCenter     = "1664"
     BusinessUnit   = "SHARED"
     DR             = "NON-DR-ENABLED"
   }
@@ -25,11 +25,11 @@ global_settings = {
   resource_groups_hub = {
     HUB-CORE-SEC = {
       name     = "hub-core-sec"
-      location = var.region1
+      location = "canadacentral"
     }
     HUB-OPERATIONS = {
       name     = "hub-operations"
-      location = var.region1
+      location = "canadacentral"
     }
   }
 }
@@ -59,7 +59,7 @@ accounting_settings = {
   azure_diagnostics_logs_event_hub = false
 
   #Logging and monitoring 
-  analytics_workspace_name = "ES-aLa"
+  analytics_workspace_name = "caflalogs"
 
   ##Log analytics solutions to be deployed 
   solution_plan_map = {
@@ -129,10 +129,10 @@ governance_settings = {
     cant_create_ip_spoke   = false
     managed_disks_only     = true
     restrict_locations     = false
-    list_of_allowed_locs   = ["southeastasia", "eastasia"]
+    list_of_allowed_locs   = ["canadacentral", "canadaeast"]
     restrict_supported_svc = false
     list_of_supported_svc  = ["Microsoft.Network/publicIPAddresses", "Microsoft.Compute/disks"]
-    msi_location           = "southeastasia"
+    msi_location           = "canadacentral"
   }
 }
 
@@ -145,5 +145,5 @@ security_settings = {
     contact_phone = "9293829328"
   }
   #Enables Azure Sentinel on the Log Analaytics repo
-  enable_sentinel = false
+  enable_sentinel = true
 }
