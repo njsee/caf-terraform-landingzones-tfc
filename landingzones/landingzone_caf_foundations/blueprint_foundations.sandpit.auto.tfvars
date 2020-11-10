@@ -4,8 +4,8 @@
 global_settings = {
   #specifies the set of locations you are going to use in this landing zone
   location_map = {
-    region1 = "var.region1"
-    region2 = "var.region2"
+    region1 = var.region1
+    region2 = var.region2
   }
 
   #naming convention to be used as defined in naming convention module, accepted values are cafclassic, cafrandom, random, passthrough
@@ -13,8 +13,8 @@ global_settings = {
 
   #Set of tags for core operations
   tags_hub = {
-    environment    = "var.env"
-    owner          = "var.owner"
+    environment    = var.env
+    owner          = var.owner
     deploymentType = "Terraform-TFC"
     costCenter     = "2020"
     BusinessUnit   = "SHARED"
@@ -25,11 +25,11 @@ global_settings = {
   resource_groups_hub = {
     HUB-CORE-SEC = {
       name     = "hub-core-sec"
-      location = "var.region1"
+      location = var.region1
     }
     HUB-OPERATIONS = {
       name     = "hub-operations"
-      location = "region1"
+      location = var.region1
     }
   }
 }
