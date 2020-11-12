@@ -317,7 +317,7 @@ core_networking = {
 
   ## settings for Azure bastion configuration
   ## not enabled, uncomment the code in the networking shared services blueprint.
-  enable_bastion = false
+  enable_bastion = true
   bastion_ip_addr_config = {
     ip_name = "bastion"
     ip_addr = {
@@ -361,7 +361,7 @@ core_networking = {
 
 
   # Settings for the Virtual Network gateway to be created
-  provision_gateway = false
+  provision_gateway = true
   gateway_config = {
     gateway_type = "VPN"
     # Possible values are "VPN" or "ExpressRoute"
