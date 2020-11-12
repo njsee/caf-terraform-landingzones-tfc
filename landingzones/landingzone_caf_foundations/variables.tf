@@ -24,3 +24,12 @@ variable "security_settings" {
 variable "governance_settings" {
   description = "(Required) object describing governance settings for landing zone configuration (azure policies and azure management groups)"
 }
+
+variable "env" {
+  description = "Envronment name, such as EnterpriseScale"
+}
+
+variable  "owner" {
+  description = "owner of the application"
+}  
+
