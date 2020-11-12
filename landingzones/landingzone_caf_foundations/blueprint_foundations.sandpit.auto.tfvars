@@ -97,7 +97,7 @@ accounting_settings = {
 ## governance
 governance_settings = {
   #current code supports only two levels of managemenr groups and one root
-  deploy_mgmt_groups = true
+  deploy_mgmt_groups = false
   management_groups = {
     root = {
       name          = "ESLZ-rootmgmtgroup"
@@ -106,11 +106,11 @@ governance_settings = {
       children = {
         child1 = {
           name          = "VSE-Management"
-          subscriptions = [b2ed820c-0215-410a-812e-ad64b41d99e6]
+          subscriptions = b2ed820c-0215-410a-812e-ad64b41d99e6
         }
         child2 = {
           name          = "VSE-Main-Sub"
-          subscriptions = [a79eb0f6-5166-47ba-b779-72938cfc6381]
+          subscriptions = a79eb0f6-5166-47ba-b779-72938cfc6381
         }
         child3 = {
           name          = "VSE-LZ2"
