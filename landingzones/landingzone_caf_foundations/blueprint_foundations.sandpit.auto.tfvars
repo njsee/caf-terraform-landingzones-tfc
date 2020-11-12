@@ -5,7 +5,7 @@ global_settings = {
   #specifies the set of locations you are going to use in this landing zone
   location_map = {
     region1 = "canadacentral"
-    region2 = "canada"
+    region2 = "canadaeast"
   }
 
   #naming convention to be used as defined in naming convention module, accepted values are cafclassic, cafrandom, random, passthrough
