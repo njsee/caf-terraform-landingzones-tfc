@@ -5,7 +5,7 @@ global_settings = {
   #specifies the set of locations you are going to use in this landing zone
   location_map = {
     region1 = "canadacentral"
-    region2 = "canadaeast"
+    region2 = "canada"
   }
 
   #naming convention to be used as defined in naming convention module, accepted values are cafclassic, cafrandom, random, passthrough
@@ -100,20 +100,20 @@ governance_settings = {
   deploy_mgmt_groups = false
   management_groups = {
     root = {
-      name          = "ESLZ-rootmgmtgroup"
+      name          = "caf-rootmgmtgroup"
       subscriptions = []
       #list your subscriptions ID in this field as ["GUID1", "GUID2"]
       children = {
         child1 = {
-          name          = "VSE-Management"
-          subscriptions = b2ed820c-0215-410a-812e-ad64b41d99e6
+          name          = "tree1child1"
+          subscriptions = []
         }
         child2 = {
-          name          = "VSE-Main-Sub"
-          subscriptions = a79eb0f6-5166-47ba-b779-72938cfc6381
+          name          = "tree1child2"
+          subscriptions = []
         }
         child3 = {
-          name          = "VSE-LZ2"
+          name          = "tree1child3"
           subscriptions = []
         }
       }
