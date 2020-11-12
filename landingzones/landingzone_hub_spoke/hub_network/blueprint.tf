@@ -169,7 +169,7 @@ module "vpn_pip" {
   convention                       = var.global_settings.convention 
   name                             = var.core_networking.gateway_config.pip.name
   location                         = var.location
-  resource_group_name              = azurerm_resource_group.rg_transit.name
+  resource_group_name              = azurerm_resource_group.rg_network.name
   ip_addr                          = var.core_networking.gateway_config.pip
   tags                             = var.global_settings.tags_hub
   diagnostics_map                  = var.caf_foundations_accounting.diagnostics_map
@@ -183,7 +183,7 @@ module "vpn_gateway" {
   
   provision_gateway                   = var.core_networking.provision_gateway
   location                            = var.location
-  resource_group_name                 = azurerm_resource_group.rg_transit.name
+  resource_group_name                 = azurerm_resource_group.rg_network.name
   tags                                = local.tags
   gateway_config                      = var.core_networking.gateway_config
   remote_network                      = var.core_networking.remote_network
@@ -204,7 +204,7 @@ module "keyvault_vpn" {
   # version = "2.0.0"
   
   convention                        = var.global_settings.convention 
-  resource_group_name               = azurerm_resource_group.rg_transit.name
+  resource_group_name               = azurerm_resource_group.rg_network.name
   akv_config                        = var.core_networking.akv_config
   prefix                            = var.prefix
   location                          = var.location
