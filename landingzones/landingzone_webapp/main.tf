@@ -21,6 +21,6 @@ locals {
   tags = merge(var.tags, local.landingzone_tag)
 }
 
-locals {
-  prefix = "ESTFC"
-}
+#locals {
+#  prefix = "ESTFC"
+#}
