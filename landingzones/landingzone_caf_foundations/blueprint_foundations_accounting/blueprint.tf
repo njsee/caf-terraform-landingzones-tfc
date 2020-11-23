@@ -5,7 +5,6 @@ resource "azurecaf_naming_convention" "rg_coresec_name" {
   resource_type    = "rg"
   max_length = 50
   convention  = var.convention
-  #update
 }
 
 resource "azurecaf_naming_convention" "rg_operations_name" {  
